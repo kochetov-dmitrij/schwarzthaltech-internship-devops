@@ -17,3 +17,9 @@ Type here what was done...
 Type here the command you used to build and run the container...
 
 ```
+
+### Tag it with :v1.0.0 and :latest and push the image to your DockerHub or Github Packages repository
+```
+Type here the public image URL
+
+```
