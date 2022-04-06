@@ -13,7 +13,7 @@ options:
   k3d:
     wait: true
     timeout: "60s"
-    disableLoadbalancer: true
+    disableLoadbalancer: false
   k3s:
     extraAgentArgs: []
   kubeconfig:
