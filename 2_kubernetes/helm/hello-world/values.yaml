@@ -1,2 +1,16 @@
-image: #todo
-port: 80
+image:
+  repository: urbeingwatched8/helloworld1
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+#port: 80
+service:
+  type: ClusterIP
+  port: 80
+  
+resources: 
+     cpu: 100m
+     memory: 128Mi
+   requests:
+     cpu: 100m
+     memory: 128Mi
