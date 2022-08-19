@@ -6,9 +6,9 @@ COPY . .
 
 RUN go mod download
 
-RUN go build -ldflags "-w" -o /hello_world
+RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o /hello_world
 
-FROM alpine
+FROM scratch
 
 COPY --from=build /hello_world /hello_world
 
