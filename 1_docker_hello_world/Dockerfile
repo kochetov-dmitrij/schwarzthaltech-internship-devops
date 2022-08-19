@@ -6,7 +6,7 @@ COPY . .
 
 RUN go mod download
 
-RUN go build -o /hello_world
+RUN go build -ldflags "-w" -o /hello_world
 
 FROM alpine
 
