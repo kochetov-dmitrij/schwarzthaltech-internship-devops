@@ -6,13 +6,13 @@ COPY . .
 
 RUN go mod download
 
-RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o /hello_world
+RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o hello_world
 
 FROM scratch
 
 COPY --from=build /etc/passwd /etc/passwd
-COPY --from=build /hello_world /hello_world
+COPY --from=build /app/hello_world /app/hello_world
 
 USER nobody
 
-ENTRYPOINT ["/hello_world"]
+ENTRYPOINT ["/app/hello_world"]
