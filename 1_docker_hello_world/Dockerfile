@@ -15,4 +15,6 @@ COPY --from=build /app/hello_world /app/hello_world
 
 USER nobody
 
+EXPOSE 8060
+
 ENTRYPOINT ["/app/hello_world"]
