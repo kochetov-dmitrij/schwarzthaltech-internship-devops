@@ -1,2 +1,3 @@
-image: #todo
+image: khaledismaeel/schwarzthaltech-interview-devops
 port: 80
+containerPort: 8060
