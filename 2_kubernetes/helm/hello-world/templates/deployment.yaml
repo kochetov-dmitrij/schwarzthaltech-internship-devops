@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: hello-world-deployment
   labels:
-    app: hello-world
+    app: {{ .Values.appLabel }}
 spec:
-  replicas: 3
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: hello-world
+      app: {{ .Values.appLabel }}
   template:
     metadata:
       labels:
-        app: hello-world
+        app: {{ .Values.appLabel }}
     spec:
       containers:
-      - name: hello-world-front-end
-        image: {{ .Values.image }}
+      - name: application-backend
+        image: {{ .Values.image}}:v{{ .Chart.AppVersion }}
         ports:
-        - containerPort: {{ .Values.containerPort }}
+        - containerPort: {{ .Values.applicationPort }}
