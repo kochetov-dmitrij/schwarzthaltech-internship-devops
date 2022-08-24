@@ -16,6 +16,9 @@ spec:
     spec:
       containers:
       - name: application-backend
-        image: {{ .Values.image}}:v{{ .Chart.AppVersion }}
+        image: {{ .Values.image }}:v{{ .Chart.AppVersion }}
         ports:
         - containerPort: {{ .Values.applicationPort }}
+        livenessProbe:
+          httpGet:
+            port: {{ .Values.applicationPort }}
