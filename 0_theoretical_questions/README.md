@@ -46,64 +46,54 @@ Encryption algorithms can be divided into symmetric and asymmetric. Symmetric al
 
 ### 8) Virtualization, hypervisor types
 
+Virtualization is running programs in a controlled environment (called virtual machine) that gives the program the illusion that its running on dedicated hardware, even when it isn't. Hypervisors are programs that manage such virtual environments and come in two types:
 
+* Type 1: the hypervisor runs directly on physical hardware.
+* Type 2: the hypervisor runs as a normal process on top of an operating system which in turn manages hardware.
 
 ### 9) Containers, how they work
-```
-Type here...
 
-```
+Containers are isolated environments in which processes are provided with virtual operating system resources, as opposed to virtual machines which provide virtual hardware. These environments are implemented on top of numerous process isolation mechanisms such as Linux cgroups and namespaces.
 
 ### 10) Alpine docker images
-```
-Type here...
 
-```
+Alpine Linux is a lightweight Linux distribution. It leverages technology originally meant for embedded systems (BusyBox and `musl`), but recently people realized that it can be used as a docker image to run applications in when a full-blown Ubuntu server is an overkill.
 
 ### 11) What are docker compose and kubernetes are for
-```
-Type here...
 
-```
+Docker compose is a tool for automating the deployment of multi-container applications on a Docker system. While Kubernetes also deploys multi-container applications, it offers much more _orchestration_ functionality: manages multiple Docker hosts, manages networking between them, recovers from errors, recovers from changes in availability, etc.
 
 ### 12) List some Kubernetes entities (e.g. pods)
-```
-Type here...
 
-```
+* Deployments: rules for deploying stateless applications.
+* StatefulSets: rules for deploying stateful applications (useful stuff, that is).
+* Secret: a (possibly encrypted) storage of values, ideal for storing passwords.
+* Roles: privilege rules for entities in the cluster.
 
 ### 13) Gitflow
-```
-Type here...
 
-```
+Gitflow is a software development workflow where the software repository is divided into several _permanent_ branches such as release, feature, development, etc. This approach is usually contrasted with trunk workflow, where there is a main branch and many _temporary_ branches are forked and merged into it. Trunk workflow is more popular nowadays.
 
 ### 14) Do you have experience with GitLab CI / Github Actions / Jenkins? What stages can be used there
-```
-Type here...
 
-```
+I have simple (i.e. from some university course projects, not industry) experience with GitHub Actions and GitLab CI and a simpler experience with Jenkins. However, I have a clear idea on what they can do; i.e. I can Google them quite efficiently :)
 
 ### 14) Do you have experience Terraform/Pulumi for deploying cloud resources. Ansible/Chef for provisioning?
-```
-Type here...
 
-```
+Used Terraform to deploy to Azure for one course project. Used Ansible to provision infrastructure in several course projects. Also at the level of experience where I can Google those things like charm.
 
 ### 15) SQL / NoSQL, CAP theorem, examples
-```
-Type here...
 
-```
+SQL stands for Structured Query Language, but here it is a database paradigm where data are represented as a table with rows. It has a strong mathematical formalism called _relational algebra_, which is why is gained strong traction historically. NoSQL is any database paradigm that diverges from the classical relational model, such document-based (MongoDB), graph-based (Neo4J), and more.
+
+CAP is a theorem stating that no distributed system can provide Consistency, Availability, and Partition tolerance at the same time. Example: consider a database with nodes A, B, C, and D. Suppose a network error causes a split where A and B are in one partition and C and D in another. If we needed the system to maintain availability, the two partitions are going to diverge as they are unable to sync, sacrificing consistency. Otherwise, we have to pause one of the partitions, sacrificing availability. So indeed, you can have either PA or PC (AC is a bit more complicated).
+
+There's an extension to the theorem called PACELC theorem which addresses the absence of partitioning, it's quite cool :)
 
 ### 15) Kafka, RabbitMQ
-```
-Type here...
 
-```
+Both Kafka and RabbitMQ are distributed frameworks for message passing at the large scale and high performance. The fundamental difference between them is in the details of message passing: in Kafka, client subscribe to events in a certain topic, RabbitMQ doesn't follow such a model.
 
 ### 15) AD, LDAP
-```
-Type here...
 
-```
+Microsoft Active Directory (AD) and the Lightweight Directory Access Protocol (LDAP) are both implementations of a directory service, a key-value mapping. What distinguishes these protocols from typical databases is that the structure of data resembles that of directories (trees), with more loose rules regarding what data can be stored. This is most popular for management purposes in organizations (user data, network resources, etc). I actually worked with LDAP in one of my courses (it was painful).
