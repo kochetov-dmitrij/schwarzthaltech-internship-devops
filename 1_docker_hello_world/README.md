@@ -37,7 +37,7 @@ docker run --cap-drop ALL --publish 8060:8060 khaledismaeel/schwarzthaltech-inte
 ```
 Note how we drop all container capabilities, principle of least privilege.
 
-![](ss.png)
+![](screenshot.png)
 
 ### Tag it with :v1.0.0 and :latest and push the image to your DockerHub or Github Packages repository
 
