@@ -90,10 +90,10 @@ CAP is a theorem stating that no distributed system can provide Consistency, Ava
 
 There's an extension to the theorem called PACELC theorem which addresses the absence of partitioning, it's quite cool :)
 
-### 15) Kafka, RabbitMQ
+### 16) Kafka, RabbitMQ
 
 Both Kafka and RabbitMQ are distributed frameworks for message passing at the large scale and high performance. The fundamental difference between them is in the details of message passing: in Kafka, client subscribe to events in a certain topic, RabbitMQ doesn't follow such a model.
 
-### 15) AD, LDAP
+### 17) AD, LDAP
 
 Microsoft Active Directory (AD) and the Lightweight Directory Access Protocol (LDAP) are both implementations of a directory service, a key-value mapping. What distinguishes these protocols from typical databases is that the structure of data resembles that of directories (trees), with more loose rules regarding what data can be stored. This is most popular for management purposes in organizations (user data, network resources, etc). I actually worked with LDAP in one of my courses (it was painful).
