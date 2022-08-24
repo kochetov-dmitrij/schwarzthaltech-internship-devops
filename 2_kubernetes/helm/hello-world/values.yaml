@@ -1,9 +1,11 @@
-image: khaledismaeel/schwarzthaltech-interview-devops
+application:
+  image:
+    repository: khaledismaeel/schwarzthaltech-interview-devops
+  port: 8060
+  label: hello-world
 
-port: 80
+deployment:
+  replicas: 3
 
-applicationPort: 8060
-
-replicaCount: 3
-
-appLabel: hello-world
+ingress:
+  port: 80

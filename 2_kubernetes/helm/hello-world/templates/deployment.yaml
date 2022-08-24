@@ -3,25 +3,25 @@ kind: Deployment
 metadata:
   name: hello-world-deployment
   labels:
-    app: {{ .Values.appLabel }}
+    app: {{ .Values.application.label }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{ .Values.deployment.replicas }}
   selector:
     matchLabels:
-      app: {{ .Values.appLabel }}
+      app: {{ .Values.application.label }}
   template:
     metadata:
       labels:
-        app: {{ .Values.appLabel }}
+        app: {{ .Values.application.label }}
     spec:
       containers:
       - name: application-backend
-        image: {{ .Values.image }}:v{{ .Chart.AppVersion }}
+        image: {{ .Values.application.image.repository }}:v{{ default .Chart.AppVersion  .Values.application.image.version}}
         ports:
-        - containerPort: {{ .Values.applicationPort }}
+        - containerPort: {{ .Values.application.port }}
         livenessProbe:
           httpGet:
-            port: {{ .Values.applicationPort }}
+            port: {{ .Values.application.port }}
         readinessProbe:
           httpGet:
-            port: {{ .Values.applicationPort }}
+            port: {{ .Values.application.port }}

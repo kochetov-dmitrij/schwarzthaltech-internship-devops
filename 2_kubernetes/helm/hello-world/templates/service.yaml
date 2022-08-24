@@ -5,8 +5,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: {{ .Values.appLabel }}
+    app: {{ .Values.application.label }}
   ports:
   - name: hello-world-default-port
-    port: {{ .Values.port }}
-    targetPort: {{ .Values.applicationPort }}
+    port: {{ .Values.ingress.port }}
+    targetPort: {{ .Values.application.port }}
