@@ -22,3 +22,6 @@ spec:
         livenessProbe:
           httpGet:
             port: {{ .Values.applicationPort }}
+        readinessProbe:
+          httpGet:
+            port: {{ .Values.applicationPort }}
