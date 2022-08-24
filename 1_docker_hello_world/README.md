@@ -12,7 +12,7 @@ We can build the Go application in `golang:alpine` and copy the generated execut
 
 Note that once we utilize this optimization, using `golang:alpine` instead of `golang` in the first layer is no longer relevant from the end user's point of view. Still, that opitmization matters from the image builder's point of view so we kept it.
 
-We further optimized the resulting image by maipulating Go compiler flags. In particular, we can reduce the final image size from ~12MB to ~10MB by stripping debugging symbols from the generated binary.
+We further optimized the resulting image by manipulating Go compiler flags. In particular, we can reduce the final image size from ~12MB to ~10MB by stripping debugging symbols from the generated binary.
 
 Finally, by generating a statically-linked binary we no longer depend on `alpine` shared libraries; we can instead use an empty `scratch` image as a base instead. This final optimization further reduced the final image size from ~10MB to 4.46MB. Neat!
 
