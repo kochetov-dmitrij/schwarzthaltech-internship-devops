@@ -78,6 +78,8 @@ Gitflow is a software development workflow where the software repository is divi
 
 I have simple (i.e. from some university course projects, not industry) experience with GitHub Actions and GitLab CI and a simpler experience with Jenkins. However, I have a clear idea on what they can do; i.e. I can Google them quite efficiently :)
 
+Typical stages include build, test, stage, deploy, etc.
+
 ### 14) Do you have experience Terraform/Pulumi for deploying cloud resources. Ansible/Chef for provisioning?
 
 Used Terraform to deploy to Azure for one course project. Used Ansible to provision infrastructure in several course projects. Also at the level of experience where I can Google those things like charm.
