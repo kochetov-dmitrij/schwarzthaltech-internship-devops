@@ -1,3 +1,6 @@
-# Schwarzthal Tech tasks for DevOps interview
+# Schwarzthal Tech tasks for Internship 2022 interview
 
-- Checkout `devops` branch and complete tasks
+- Complete the tasks in folders and make a pull request
+- Ask tg: @dmitrii_kochetov if anything is unclear
+- We will review it during the call (first 20 mins)
+- Also be ready to solve a programming task in Go/Python (last 40 mins)
