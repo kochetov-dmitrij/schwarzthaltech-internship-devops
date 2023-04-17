@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  vault:
+    networks:
+      - net_a
+    image: vault:1.8.3
+    cap_add:
+      - IPC_LOCK
+    ports:
+      - "8200:8200"
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=f23612cf-824d-4206-9e94-e31a6dc8ee8d
+networks:
+  net_a:
