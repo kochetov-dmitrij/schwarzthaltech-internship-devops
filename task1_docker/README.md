@@ -7,10 +7,13 @@ as possible and the benefits to this is to reduce the attack area and
 improve the security of the overall application. The methods implemented involves:
 
 - Using a specific base image that matches the requirements of the application in production
+
 - when using the COPY command, we make sure we copy the necessary files 
 for the building and running of the application
+
 - Combining the RUN command instead of using multiple RUN commands, 
 becasue these commands add an extra layer to the application
+
 - Finally using a multi-stage build
 
 ```
