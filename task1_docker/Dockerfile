@@ -1,7 +1,7 @@
 # Build Stage
 FROM golang:1.19 AS build
 WORKDIR /app
-COPY go.mod go.sum ./
+COPY go.mod ./
 RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o .hello_world && strip /hello_world
