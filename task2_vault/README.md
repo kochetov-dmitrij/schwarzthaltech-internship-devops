@@ -18,15 +18,16 @@
 ### 1. Add missing resources that will grant permissions for "service-alpha" container to read the "alpha" secret
 Look for TODO comment in the tf config. Don't modify existing resources.\
 Check if the container is able to read and print the secret or still produces errors: `docker logs -f service-alpha`.
-```
-Type here what was done...
 
-```
+We configured 2 simple resources:
+- A user with the `vault_generic_endpoint` resource
+- A policy with the `vault_policy` resource
+
+And that's it! The Alpha service started.
+
+![](screenshot.png)
 
 ### 2. Split the terraform config into 2 modules.
-One for building/deploying the service, another for managing vault resources.\
-Use variables.
-```
-Type here what was done...
+One for building/deploying the service, another for managing vault resources.
 
-```
+Honestly, I couldn't finish this task. The module system of Terraform was too much for me to learn over the last hour.
