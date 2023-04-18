@@ -58,8 +58,6 @@ the command to run when the container starts
 
 ### 3. Build, run and open in browser
 ```
-Type here the command you used to build and run the container...
-
 To do this we will run the following command
 
 - docker build -t go_app .
@@ -71,8 +69,6 @@ To open in browser, I will access http:/localhost:8060/helloworld
 
 ### 4. Tag it with :v1.0.0 and :latest and push the image to your DockerHub or Github Packages repository
 ```
-Type here the public image URL
-
 For (:v1.0.0):
 - docker build -t galactican/go_app:v1.0.0 .
 - docker push galactican/go_app:v1.0.0
