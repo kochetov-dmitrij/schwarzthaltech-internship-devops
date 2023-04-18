@@ -1,4 +1,4 @@
-# Schwarzthal Tech tasks for Internship 2022 interview
+# Schwarzthal Tech tasks for Internship 2023 interview
 
 - Complete the tasks in folders and make a pull request
 - Ask tg: @dmitrii_kochetov if anything is unclear
