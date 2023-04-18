@@ -43,6 +43,16 @@ necessary flags to produce a statically linked binary executable ('/
 hello_world').
 Finally, I used the strip command to remove the debug information from
 the executable, although this is optional and not necessary.
+
+- Production Stage
+
+In this stage, I will start with a minimal 'scratch' base image, which
+contains no files or dependencies.
+I copied the '/hello_world' binary executable from the 'build' stage
+using the 'COPY --from=build' command which copies the file from the 
+'build' stage to the current stage.
+Finally, I will set the entry point to '/hello_world', which specifies
+the command to run when the container starts
 ```
 
 ### 3. Build, run and open in browser
