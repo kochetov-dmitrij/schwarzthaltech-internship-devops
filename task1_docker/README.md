@@ -2,14 +2,14 @@
 
 ### 1. Optimize Dockerfile (make it more lightweight)
 ```
-To optimize it, it means we have to make the Dockerfile as lightweight
+To optimize it, it means I have to make the Dockerfile as lightweight
 as possible and the benefits to this is to reduce the attack area and
 improve the security of the overall application. The methods implemented involves:
 
 - Using a specific base image that matches the requirements of the 
 application in production
 
-- when using the COPY command, we make sure we copy the necessary files 
+- when using the COPY command, I made sure I copied the necessary files 
 for the building and running of the application
 
 - Combining the RUN command instead of using multiple RUN commands, 
@@ -31,13 +31,15 @@ The multistage build consist of two stages, where each is defined with
 its own FROM statement
 
 - Build Stage 
-in this stage, we use an official Golang image as the base image and 
-give it an alias "build" ('FROM golang:1.19 AS build). I set the 
-working directory to "./app", copy the go.mod files to the container, 
-and download the Go moduke dependencies using the "go mod download". I
-then copy the rest of the application code to the container and build it
-using the "CGO_ENABLED=0 GOOS=linux go build" command with the necessary
-flags to produce a statically linked binary executable ('/hello_world').
+
+In this stage, I use an official Golang image as the base image and 
+give it an alias "build" ('FROM golang:1.19 AS build). 
+I set the  working directory to "./app", copy the go.mod files to the container, and download the Go module dependencies using the "go mod 
+download". 
+I then copy the rest of the application code to the container and build 
+it using the "CGO_ENABLED=0 GOOS=linux go build" command with the 
+necessary flags to produce a statically linked binary executable ('/
+hello_world').
 Finally, I used the strip command to remove the debug information from
 the executable, although this is optional and not necessary.
 ```
