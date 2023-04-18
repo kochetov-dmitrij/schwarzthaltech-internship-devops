@@ -34,8 +34,9 @@ its own FROM statement
 
 In this stage, I use an official Golang image as the base image and 
 give it an alias "build" ('FROM golang:1.19 AS build). 
-I set the  working directory to "./app", copy the go.mod files to the container, and download the Go module dependencies using the "go mod 
-download". 
+I set the  working directory to "./app", copy the go.mod files to 
+the container, and download the Go module dependencies using the "go 
+mod download". 
 I then copy the rest of the application code to the container and build 
 it using the "CGO_ENABLED=0 GOOS=linux go build" command with the 
 necessary flags to produce a statically linked binary executable ('/
