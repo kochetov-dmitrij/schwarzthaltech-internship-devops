@@ -41,8 +41,9 @@ I then copy the rest of the application code to the container and build
 it using the "CGO_ENABLED=0 GOOS=linux go build" command with the 
 necessary flags to produce a statically linked binary executable ('/
 hello_world').
-Finally, I used the strip command to remove the debug information from
-the executable, although this is optional and not necessary.
+Finally an optional case of using the strip command. The strip command
+can be used to remove the debug information from the executable, this 
+like i said is optional and not necessary.
 
 - Production Stage
 
@@ -59,10 +60,18 @@ the command to run when the container starts
 ```
 Type here the command you used to build and run the container...
 
+To do this we will run the following command
+
+- docker build -t go_app .
+- docker run -p 8060:8060 go_app
+
+To open in browser, I will access http:/localhost:8060/helloworld
+
 ```
 
 ### 4. Tag it with :v1.0.0 and :latest and push the image to your DockerHub or Github Packages repository
 ```
 Type here the public image URL
+
 
 ```
