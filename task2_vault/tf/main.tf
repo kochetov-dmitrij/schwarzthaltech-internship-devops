@@ -47,9 +47,27 @@ resource "vault_auth_backend" "userpass" {
 
 # TODO: Add missing users and policies
 
+resource "vault_generic_endpoint" "service-account-1" {
+  depends_on           = [vault_auth_backend.userpass]
+  path                 = "auth/userpass/users/service-account-1"
+  ignore_absent_fields = true
 
+  data_json = <<EOT
+{
+  "policies": ["service-account-1"],
+  "password": "pass99"
+}
+EOT
+}
 
-
+resource "vault_policy" "service-account-1" {
+  name   = "service-account-1"
+  policy = <<EOT
+path "secret/data/alpha" {
+  capabilities = ["read"]
+}
+EOT
+}
 
 
 ###############################
