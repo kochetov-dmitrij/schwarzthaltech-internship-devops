@@ -1,6 +1,18 @@
-FROM golang:1.19
+FROM golang:alpine AS build
+
 WORKDIR /app
 COPY . .
+
 RUN go mod download
-RUN go build -o /hello_world
-ENTRYPOINT ["/hello_world"]
+RUN CGO_ENABLED=0 go build -ldflags "-s -w" -o hello_world
+
+FROM scratch
+
+COPY --from=build /etc/passwd /etc/passwd
+COPY --from=build /app/hello_world /app/hello_world
+
+USER nobody
+
+EXPOSE 8060
+
+ENTRYPOINT ["/app/hello_world"]
