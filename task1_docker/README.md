@@ -77,11 +77,15 @@ For (:v1.0.0):
 - docker build -t galactican/go_app:v1.0.0 .
 - docker push galactican/go_app:v1.0.0
 
-![Docker image for v1.0.0](https://hub.docker.com/layers/galactican/go_app/v1.0.0/images/sha256:4805a5a50105f82ec9563b118757084608a565760e64281bac93f8c3370882cd)
+```
+[Docker image for v1.0.0](https://hub.docker.com/layers/galactican/go_app/v1.0.0/images/sha256:4805a5a50105f82ec9563b118757084608a565760e64281bac93f8c3370882cd)
 
+```
 For (:latest)
 - docker build -t galactican/go_app:latest .
 - docker push galactican/go_app:latest
-URL= https://hub.docker.com/layers/galactican/go_app/latest/images/sha256:4805a5a50105f82ec9563b118757084608a565760e64281bac93f8c3370882cd
 
 ```
+[Docker image for :latest](https://hub.docker.com/layers/galactican/go_app/latest/images/sha256:4805a5a50105f82ec9563b118757084608a565760e64281bac93f8c3370882cd)
+
+
