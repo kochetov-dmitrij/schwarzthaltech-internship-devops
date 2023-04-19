@@ -1,3 +1,5 @@
+# This is the main terraform script used for implemeneting the module created
+
 module "service-alpha" {
   source = "./service-alpha"
 }
