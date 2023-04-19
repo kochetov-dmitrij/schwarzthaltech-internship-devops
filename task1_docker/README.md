@@ -87,4 +87,5 @@ For (:latest)
 ```
 [Docker image for :latest](https://hub.docker.com/layers/galactican/go_app/latest/images/sha256:4805a5a50105f82ec9563b118757084608a565760e64281bac93f8c3370882cd)
 
-![](task1_docker\image2.png)
+
+![](image2.png)
