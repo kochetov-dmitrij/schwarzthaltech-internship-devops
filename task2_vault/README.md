@@ -19,7 +19,7 @@
 Look for TODO comment in the tf config. Don't modify existing resources.\
 Check if the container is able to read and print the secret or still produces errors: `docker logs -f service-alpha`.
 ```
-Type here what was done...
+
 I created a new policy called service-alpha-policy as showned in the script. 
 The policy explains that the created secrets engine will have a read permission. 
 Meaning that every key implemented in that directory can be read when they are required
@@ -29,7 +29,6 @@ Meaning that every key implemented in that directory can be read when they are r
 One for building/deploying the service, another for managing vault resources.\
 Use variables.
 ```
-Type here what was done...
 
 I splitted the configuration into two modules, where one of the modules 'service-alpha' is
 responsible for building and deploying the service alpha container
