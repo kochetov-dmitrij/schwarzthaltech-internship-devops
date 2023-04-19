@@ -1,3 +1,5 @@
+# This module is responsible for building and deploying the service-alpha container.
+
 terraform {
   required_version = ">= 1.1.0"
 
