@@ -1,3 +1,14 @@
+module "service-alpha" {
+  source = "./service-alpha"
+}
+
+module "vault" {
+  source = "./vault"
+}
+
+
+
+/**
 terraform {
   required_version = ">= 1.1.0"
 
@@ -93,3 +104,5 @@ resource "docker_container" "service-alpha" {
     name = "task2_vault_net_a"
   }
 }
+
+**/
