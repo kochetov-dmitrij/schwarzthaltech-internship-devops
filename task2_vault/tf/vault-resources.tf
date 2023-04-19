@@ -45,7 +45,7 @@ EOT
 
 # user with the above policy
 resource "vault_userpass_user" "service-account" {
-  username = "interviewee"
+  username = "service-account-1"
   password = "pass99"
   policies = [
     vault_policy.service-alpha-policy.name
