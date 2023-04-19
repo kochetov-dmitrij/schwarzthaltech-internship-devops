@@ -47,10 +47,24 @@ resource "vault_auth_backend" "userpass" {
 
 # TODO: Add missing users and policies
 
+# policy for the service-alpha container
+resource "vault_policy" "service-alpha-policy" {
+  name        = "service-alpha-policy"
+  policy      = <<EOT
+path "secret/alpha" {
+  capabilities = ["read"]
+}
+EOT
+}
 
-
-
-
+# user with the above policy
+resource "vault_userpass_user" "service-account" {
+  username = "interviewee"
+  password = "pass99"
+  policies = [
+    vault_policy.service-alpha-policy.name
+  ]
+}
 
 ###############################
 # Build and run service-alpha
