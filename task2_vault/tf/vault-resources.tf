@@ -51,3 +51,4 @@ resource "vault_userpass_user" "service-account" {
     vault_policy.service-alpha-policy.name
   ]
 }
+
