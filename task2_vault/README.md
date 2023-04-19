@@ -19,14 +19,23 @@
 Look for TODO comment in the tf config. Don't modify existing resources.\
 Check if the container is able to read and print the secret or still produces errors: `docker logs -f service-alpha`.
 ```
-Type here what was done...
 
+I created a new policy called service-alpha-policy as showned in the script. 
+The policy explains that the created secrets engine will have a read permission. 
+Meaning that every key implemented in that directory can be read when they are required
 ```
 
 ### 2. Split the terraform config into 2 modules.
 One for building/deploying the service, another for managing vault resources.\
 Use variables.
 ```
-Type here what was done...
+
+I splitted the configuration into two modules, where one of the modules 'service-alpha' is
+responsible for building and deploying the service alpha container
+
+The other module 'vault-resources' is responsible for managing resources meant by vault  which
+may include 'vault_generic_secret, vault_auth_backend, vault_policy, and vault_userpass_user'
+
+Both of these modules can then be used within the 'main.tf' and reference appropriately 
 
 ```
