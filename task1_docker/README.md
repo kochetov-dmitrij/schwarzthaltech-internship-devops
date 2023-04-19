@@ -66,11 +66,8 @@ To do this we will run the following command
 To open in browser, I will access http:/localhost:8060/helloworld
 
 ```
-<center>
 
 ![](image.png=600x)
-
-</center>
 
 ### 4. Tag it with :v1.0.0 and :latest and push the image to your DockerHub or Github Packages repository
 ```
