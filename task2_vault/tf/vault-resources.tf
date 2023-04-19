@@ -1,3 +1,5 @@
+# This module is reponsible for managing service in vault that is required by service-alpha
+
 terraform {
   required_version = ">= 1.1.0"
 
